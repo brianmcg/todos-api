@@ -17,6 +17,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jwt', '~> 1.5.6'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Allows you to generate your JSON in an object-oriented and convention-driven manner.
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   # brings the RSpec testing framework
