@@ -19,22 +19,24 @@ gem 'jwt', '~> 1.5.6'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Allows you to generate your JSON in an object-oriented and convention-driven manner.
 gem 'active_model_serializers', '~> 0.10.0'
+# Pagination library for Rails, Sinatra, Merb, DataMapper, and more
+gem 'will_paginate', '~> 3.1.0'
+# A port of Perl's Data::Faker library that generates fake data.
+gem 'faker'
 
 group :development, :test do
-  # brings the RSpec testing framework
+  # Brings the RSpec testing framework
   gem 'rspec-rails', '~> 3.5'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Provides Rails integration for factory_bot.
   gem 'factory_bot_rails', '~> 4.0'
   # RSpec- and Minitest-compatible one-liners that test common Rails functionality.
   gem 'shoulda-matchers', '~> 3.1'
-  # A port of Perl's Data::Faker library that generates fake data.
-  gem 'faker'
-  # A set of strategies for cleaning your database in Ruby.
+    # A set of strategies for cleaning your database in Ruby.
   gem 'database_cleaner'
 end
 

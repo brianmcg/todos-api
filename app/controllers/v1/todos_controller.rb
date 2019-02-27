@@ -3,9 +3,17 @@ module V1
     before_action :set_todo, only: [:show, :update, :destroy]
 
     # GET /todos
-    def index
-      # get current user todos
-      @todos = current_user.todos
+     def index
+      page_size = params[:page_size]
+      page = params[:page] || 1
+
+      if page_size.nil?
+        # get current user todos
+        @todos = current_user.todos
+      else
+        # get paginated current user todos
+        @todos = current_user.todos.paginate(page: page, per_page: page_size)
+      end
       json_response(@todos)
     end
 
